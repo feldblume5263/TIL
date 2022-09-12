@@ -15,15 +15,23 @@ class ViewController: UIViewController {
     @IBOutlet weak var substractButton: UIButton!
     
     private var willSetCount = 0 {
-        willSet {
+        willSet() {
             willSetCountLabel.text = "willSetCount = \(willSetCount)"
         }
+        
+//        willSet(newVal) {
+//            willSetCountLabel.text = "willSetCount = \(newVal)"
+//        }
     }
     
     private var didSetCount = 0 {
         didSet {
             didSetCountLabel.text = "didSetCount = \(didSetCount)"
         }
+        
+//        didSet(oldVal) {
+//            didSetCountLabel.text = "didSetCount = \(oldVal)"
+//        }
     }
     
     override func viewDidLoad() {
