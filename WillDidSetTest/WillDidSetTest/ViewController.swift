@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var substractButton: UIButton!
     
     private var willSetCount = 0 {
-        willSet() {
+        willSet {
             willSetCountLabel.text = "willSetCount = \(willSetCount)"
         }
         
